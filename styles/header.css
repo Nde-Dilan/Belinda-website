@@ -1,0 +1,109 @@
+.header{
+    position: relative;
+    z-index: 99999;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.header__menu{
+    display: none;
+}
+.header__bars{
+    width: var(--size-lg);
+    /* height: var(--size-base); */
+    color: var(--cl-white);
+}
+
+.logo {
+    color: gray;
+    font-size: 18px;
+    position: absolute;
+    top: 0;
+    margin:calc(var(--size-lg) + .2rem)  ;
+    left: 0;
+  }
+
+/* @meedia (min-width: 475px){
+   
+    
+} */
+/*  small */
+/* @meedia (min-width: 640px){
+      
+} */
+/* medium */
+@media (min-width: 768px){
+      .header__menu{
+        display: flex;
+        align-items: center;
+        list-style: none;
+        /* border: 1px solid red; this is usefull to see default padding/margin */
+        padding: 0;
+        gap: 2em;
+    }
+    .header__bars{display: none;}
+    .menu__link{
+        font-size: var(--size-xs);
+        text-decoration: none;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        transition: color 0.3s;
+    }
+    .menu__link:hover{
+        color: var(--cl-slate600);
+    }
+    .menu__line{
+        border: 1px solid var(--cl-slate600);
+        padding-top: 1.5rem;
+    }
+    .menu__sun{
+        width: var(--size-base);
+        height: var(--size-base);
+        color: var(--cl-dark);
+        display: block; 
+    }
+    
+    .menu__resume{
+        font-size: var(--size-xs);
+    }
+}
+/* large */
+@media (min-width: 1024px){
+    .header__menu{
+        display: flex;
+        align-items: center;
+        list-style: none;
+        /* border: 1px solid red; this is usefull to see default padding/margin */
+        padding: 0;
+        gap: 2em;
+    }
+    .header__bars{display: none;}
+    .menu__link{
+        font-size: var(--size-lg);
+    }
+    .menu__link:hover{
+        color: var(--cl-slate600);
+    }
+    .menu__line{
+        border: 1px solid var(--cl-slate600);
+        padding-top: 1.5rem;
+    }
+    .menu__sun{
+        width: var(--size-xlg);
+        height: var(--size-xlg);
+    }
+    
+    .menu__resume{
+        font-size: var(--size-s);
+    }
+}
+/* extra large */
+/* @media (min-width: 1280px){
+     
+} */
+/* 2extra small */
+/* @media (min-width: 1530px){
+      
+} */
