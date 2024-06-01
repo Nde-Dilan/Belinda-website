@@ -1,15 +1,38 @@
+"use client";
+
 import React from "react";
 import "../styles/header.css";
 import "../styles/utils.css";
 
+const handleClick = () => {
+  let barIcon = document.querySelector(".header__bars");
+  let mobileMenu = document.querySelector(".mobile-nav");
+  let mobileLinks = document.querySelectorAll(".mobile-nav__link");
+  let isMobileNavOpen = false;
+  const styleProps = (display, overflowY, isOpen) => {
+    mobileMenu.style.display = display;
+    document.body.style.overflowY = overflowY;
+    isMobileNavOpen = isOpen;
+  };
+  barIcon.addEventListener("click", () => {
+    isMobileNavOpen
+      ? styleProps("none", "auto", false)
+      : styleProps("flex", "hidden", true);
+  });
+  mobileLinks.forEach((el) => {
+    el.addEventListener("click", () => {
+      styleProps("none", "auto", false);
+    });
+  });
+};
 
 const Header = () => {
   return (
     <header className="header container">
-        <div className="logo">Belinda's Hair</div>
+      <div className="logo">Belinda's Hair</div>
       <nav>
         <ul className="header__menu">
-        <li>
+          <li>
             <a className="menu__link" href="#about">
               Home
             </a>
@@ -76,12 +99,16 @@ const Header = () => {
             </button>
           </li>
           <li className="a">
-            <a href="./résume.html" target="_blank" className="menu__resume btn">
+            <a
+              href="./résume.html"
+              target="_blank"
+              className="menu__resume btn"
+            >
               Book Now
             </a>
           </li>
         </ul>
-        <button className="header__bars">
+        <button className="header__bars" onClick={handleClick}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -97,7 +124,7 @@ const Header = () => {
         </button>
       </nav>
     </header>
-  )
+  );
 };
 
 export default Header;

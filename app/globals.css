@@ -70,5 +70,11 @@ body {
 .pages{
   display: flex;
   justify-content: space-between;
-  border: 4px solid red;
+}
+
+
+.call_to_action_text{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-style: italic;
+  font-size: var(--size-2xl);
 }
