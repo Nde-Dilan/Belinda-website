@@ -1,4 +1,6 @@
 import React from 'react'
+import "../styles/mobile-nav.css";
+
 
 const MobileNav = () => {
   return (
@@ -10,6 +12,7 @@ const MobileNav = () => {
           <li><a class="mobile-nav__link" href="#about">HOME</a></li>
           <li><a class="mobile-nav__link" href="#featured">ABOUT US</a></li>
           <li><a class="mobile-nav__link" href="#contact">CONTACT</a></li>
+          <li><a class="mobile-nav__link" href="#contact">694525931</a></li>
           <li class="mobile-nav__link-line"></li>
           <li>
             <button id="theme-toggle" class="mobile-menu__sun">

@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 :root{
-  --cl-dark:#070a13;
+  /* --cl-dark:#070a13; */
+  --cl-dark:#000000;
   --cl-light:#f1f5f9;
   --cl-rose:#e11d48;
   --cl-indigo:#4f46e5;

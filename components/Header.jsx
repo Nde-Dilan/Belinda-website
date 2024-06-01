@@ -4,21 +4,25 @@ import React from "react";
 import "../styles/header.css";
 import "../styles/utils.css";
 
+let isMobileNavOpen = false;
+
 const handleClick = () => {
   let barIcon = document.querySelector(".header__bars");
   let mobileMenu = document.querySelector(".mobile-nav");
   let mobileLinks = document.querySelectorAll(".mobile-nav__link");
-  let isMobileNavOpen = false;
+
+  console.log(mobileMenu);
+   isMobileNavOpen = !isMobileNavOpen;
   const styleProps = (display, overflowY, isOpen) => {
     mobileMenu.style.display = display;
     document.body.style.overflowY = overflowY;
-    isMobileNavOpen = isOpen;
+    isMobileNavOpen = !isOpen;
   };
-  barIcon.addEventListener("click", () => {
+  
     isMobileNavOpen
       ? styleProps("none", "auto", false)
       : styleProps("flex", "hidden", true);
-  });
+  
   mobileLinks.forEach((el) => {
     el.addEventListener("click", () => {
       styleProps("none", "auto", false);
