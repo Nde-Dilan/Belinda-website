@@ -4,8 +4,6 @@ const darkmode = () => {
   let sunBtn = document.querySelectorAll(".sun");
   let contact__links = document.querySelectorAll(".contact__link");
   let theme = localStorage.getItem("theme");
-  let linkedinBage = document.querySelector(".linkedin_badge");
-  //on mount , when you first visit a page or reload the page, the && executes the first falsy value else executes the last statement.
   if (theme) {
     document.body.classList.add(theme);
     contact__links.forEach((el) => el.setAttribute("fill", "black"));

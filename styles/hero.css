@@ -14,6 +14,7 @@
   background-position: center; /* Adjust as needed */
   position: relative; /* Needed for positioning */
 }
+
 .hero p:nth-child(1) {
   position: absolute;
   bottom: 100px;
@@ -32,7 +33,7 @@
   font-weight: bold;
   letter-spacing: 0.2rem;
   /* font-family: Georgia, 'Times New Roman', Times, serif; */
-  padding: 10px; 
+  padding: 10px;
   color: #fff;
 }
 
@@ -42,7 +43,6 @@
   left: 10px; /* Adjust position as needed */
   padding: 10px 20px; /* Adjust padding as needed */
 }
-
 
 @media (min-width: 475px) {
   .hero {
@@ -58,15 +58,50 @@
     width: 80%;
     padding: 20%;
   }
+  .desc p {
+    font-size: var(--size-2xl);
+  }
+
+  .hero p:nth-child(1) {
+    font-size: 45px;
+  }
+
+  .hero p:nth-child(2) {
+    font-size: 45px;
+  }
 }
 /* large */
 @media (min-width: 1024px) {
-  
+  .hero p:nth-child(1) {
+    font-size: 45px;
+  }
+
+  .hero p:nth-child(2) {
+    font-size: 45px;
+  }
 }
 /* extra large */
 @media (min-width: 1280px) {
+  .hero p:nth-child(1) {
+    font-size: 55px;
+    bottom: 160px;
+  }
+
+  .hero p:nth-child(2) {
+    font-size: 55px;
+    margin-bottom: 10px;
+  }
 }
 /* 2extra small */
 @media (min-width: 1530px) {
-  
+  .hero p:nth-child(1) {
+    bottom: 200px;
+    font-size: 65px;
+    margin-bottom: 10px;
+  }
+
+  .hero p:nth-child(2) {
+    font-size: 85px;
+    margin-bottom: 10px;
+  }
 }
